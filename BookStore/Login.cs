@@ -25,7 +25,7 @@ namespace BookStore
             LoginFail alertFail = new LoginFail();
             LoginSuccess alertSuccess = new LoginSuccess();
             SqlConnection ConnectionString = new SqlConnection(@"Data Source=Overdoseee;Initial Catalog=OverdoseBook;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM UserTable WHERE Username='" + Username + "' AND password='" + Password + "'", ConnectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM user WHERE username='" + Username + "' AND password='" + Password + "'", ConnectionString);
             
             sda.Fill(dt);
             
@@ -80,6 +80,9 @@ namespace BookStore
             signUp.Show();
         }
 
-       
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
