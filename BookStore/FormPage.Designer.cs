@@ -31,6 +31,7 @@ namespace BookStore
         {
             this.LoginBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NhanVienbtn = new System.Windows.Forms.Button();
             this.Change6 = new System.Windows.Forms.Button();
             this.Change5 = new System.Windows.Forms.Button();
             this.Change4 = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@ namespace BookStore
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.NhanVienbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -96,21 +96,32 @@ namespace BookStore
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.NhanVienbtn);
+            this.panel1.Controls.Add(this.Change);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.LoginBtn);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Change6);
             this.panel1.Controls.Add(this.Change5);
             this.panel1.Controls.Add(this.Change4);
             this.panel1.Controls.Add(this.Change3);
             this.panel1.Controls.Add(this.Change2);
-            this.panel1.Controls.Add(this.Change);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.LoginBtn);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-7, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MinimumSize = new System.Drawing.Size(2, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1693, 98);
             this.panel1.TabIndex = 2;
+            // 
+            // NhanVienbtn
+            // 
+            this.NhanVienbtn.Location = new System.Drawing.Point(615, 24);
+            this.NhanVienbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.NhanVienbtn.Name = "NhanVienbtn";
+            this.NhanVienbtn.Size = new System.Drawing.Size(186, 49);
+            this.NhanVienbtn.TabIndex = 21;
+            this.NhanVienbtn.Text = "More staff";
+            this.NhanVienbtn.UseVisualStyleBackColor = true;
+            this.NhanVienbtn.Click += new System.EventHandler(this.NhanVienbtn_Click);
             // 
             // Change6
             // 
@@ -352,6 +363,7 @@ namespace BookStore
             this.dataGridView1.Size = new System.Drawing.Size(1313, 841);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // dataGridView3
             // 
@@ -442,32 +454,21 @@ namespace BookStore
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // NhanVienbtn
-            // 
-            this.NhanVienbtn.Location = new System.Drawing.Point(615, 24);
-            this.NhanVienbtn.Margin = new System.Windows.Forms.Padding(4);
-            this.NhanVienbtn.Name = "NhanVienbtn";
-            this.NhanVienbtn.Size = new System.Drawing.Size(186, 49);
-            this.NhanVienbtn.TabIndex = 21;
-            this.NhanVienbtn.Text = "More staff";
-            this.NhanVienbtn.UseVisualStyleBackColor = true;
-            this.NhanVienbtn.Click += new System.EventHandler(this.NhanVienbtn_Click);
-            // 
             // FormPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 846);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView6);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dataGridView5);
+            this.Controls.Add(this.dataGridView4);
+            this.Controls.Add(this.dataGridView3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPage";
             this.Text = "Form1";

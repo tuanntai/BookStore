@@ -19,6 +19,7 @@ namespace BookStore
         private static SqlConnection sqlConnections;
         private SqlDataAdapter dataAdapter;
         private SqlCommand sqlCommand;
+        DataTable tbBook;
         public FormPage()
         {
             InitializeComponent();
@@ -128,7 +129,9 @@ namespace BookStore
 
         private void button7_Click(object sender, EventArgs e)
         {
+
             Book book = new Book();
+            book.Show();
         }
 
         private void Home_Click(object sender, EventArgs e)
@@ -263,6 +266,11 @@ namespace BookStore
         private void NhanVienbtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Book book = new Book();
         }
     }
 }
